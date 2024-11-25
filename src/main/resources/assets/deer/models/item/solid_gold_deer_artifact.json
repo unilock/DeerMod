@@ -1,0 +1,6 @@
+{
+  "parent": "item/generated",
+  "textures": {
+    "layer0": "deer:item/solid_gold_deer_artifact"
+  }
+}

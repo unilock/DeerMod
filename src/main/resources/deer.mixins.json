@@ -1,11 +1,12 @@
 {
-	"required": true,
-	"package": "cc.unilock.deer.mixin",
-	"compatibilityLevel": "JAVA_21",
-	"mixins": [
-		"ExampleMixin"
-	],
-	"injectors": {
-		"defaultRequire": 1
+  "required": true,
+  "package": "cc.unilock.deer.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "AbstractFurnaceBlockEntityMixin",
+    "CookingRecipeSerializerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
 	}
 }

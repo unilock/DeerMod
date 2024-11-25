@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:smelting",
+  "ingredient": {
+    "item": "deer:solid_gold_deer_artifact"
+  },
+  "result": {
+    "id": "minecraft:gold_block",
+    "count": 64
+  }
+}
