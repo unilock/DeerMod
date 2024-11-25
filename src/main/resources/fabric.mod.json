@@ -1,0 +1,29 @@
+{
+	"schemaVersion": 1,
+	"id": "deer",
+	"version": "${version}",
+	"name": "Deer",
+	"description": "This is an example description! Tell everyone what your mod is about!",
+	"authors": [
+		"unilock"
+	],
+	"contact": {
+		"sources": "https://github.com/unilock/deer"
+	},
+	"license": "MIT",
+	"icon": "assets/deer/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"cc.unilock.deer.DeerMod"
+		]
+	},
+	"mixins": [
+		"deer.mixins.json"
+	],
+	"depends": {
+		"fabricloader": "*",
+		"minecraft": ">=1.21",
+		"fabric-api": "*"
+	}
+}
