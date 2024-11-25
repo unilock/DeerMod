@@ -2,13 +2,17 @@
 	"schemaVersion": 1,
 	"id": "deer",
 	"version": "${version}",
-	"name": "Deer",
+	"name": "DeerMod",
 	"description": "This is an example description! Tell everyone what your mod is about!",
 	"authors": [
 		"unilock"
 	],
+	"contributors": [
+		"eden poodleboats"
+	],
 	"contact": {
-		"sources": "https://github.com/unilock/deer"
+		"sources": "https://github.com/unilock/DeerMod",
+		"issues": "https://github.com/unilock/DeerMod/issues"
 	},
 	"license": "MIT",
 	"icon": "assets/deer/icon.png",
