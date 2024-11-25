@@ -15,6 +15,7 @@ public class AbstractFurnaceBlockEntityMixin {
 	@WrapOperation(method = "craftRecipe", at = @At(value = "INVOKE", target = "Lnet/minecraft/item/ItemStack;decrement(I)V"))
 	private static void craftRecipe$decrement(ItemStack instance, int amount, Operation<Void> original, @Local(argsOnly = true) DefaultedList<ItemStack> slots) {
 		if (instance.isOf(DeerItems.SOLID_GOLD_DEER_ARTIFACT)) {
+			original.call(instance, amount);
 			slots.set(0, DeerItems.RAW_DEER.getDefaultStack());
 		} else {
 			original.call(instance, amount);
