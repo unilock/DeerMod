@@ -2,5 +2,7 @@
   "item.deer.american_cheese_deer": "American Cheese Deer",
   "item.deer.raw_deer": "Raw Deer",
   "item.deer.processed_deer": "Processed Deer",
-  "item.deer.solid_gold_deer_artifact": "Solid Gold Deer Artifact"
+  "item.deer.solid_gold_deer_artifact": "Solid Gold Deer Artifact",
+
+  "tag.item.deer.deer": "Deer"
 }
