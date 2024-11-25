@@ -21,7 +21,10 @@ public class ProcessedDeerItem extends Item {
 		if (!world.isClient) {
 			Optional<RegistryEntry.Reference<SoundEvent>> optional = Registries.SOUND_EVENT.getRandom(world.random);
 			if (optional.isPresent()) {
-				world.playSound(null, entity.getX(), entity.getY(), entity.getZ(), optional.get(), SoundCategory.MASTER, 1.0F, 1.0F, world.random.nextLong());
+				RegistryEntry.Reference<SoundEvent> reference = optional.get();
+				if (!reference.registryKey().getValue().getPath().startsWith("music")) {
+					world.playSound(null, entity.getX(), entity.getY(), entity.getZ(), reference, SoundCategory.MASTER, 1.0F, 1.0F, world.random.nextLong());
+				}
 			}
 		}
 	}
