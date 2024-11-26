@@ -19,6 +19,7 @@ public class ProcessedDeerItem extends Item {
 
 	@Override
 	public void inventoryTick(ItemStack stack, World world, Entity entity, int slot, boolean selected) {
+		super.inventoryTick(stack, world, entity, slot, selected);
 		if (!world.isClient && entity instanceof LivingEntity living && living.isHolding(this)) {
 			Optional<RegistryEntry.Reference<SoundEvent>> optional = Registries.SOUND_EVENT.getRandom(world.random);
 			if (optional.isPresent()) {
