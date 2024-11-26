@@ -1,6 +1,7 @@
 {
   "required": true,
   "package": "cc.unilock.deer.mixin",
+  "plugin": "cc.unilock.deer.DeerPlugin",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
     "AbstractFurnaceBlockEntityMixin",
