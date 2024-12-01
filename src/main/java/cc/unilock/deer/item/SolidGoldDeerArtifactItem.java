@@ -1,5 +1,7 @@
 package cc.unilock.deer.item;
 
+import net.fabricmc.api.EnvType;
+import net.fabricmc.loader.api.FabricLoader;
 import net.minecraft.client.resource.language.I18n;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.Item;
@@ -36,11 +38,12 @@ public class SolidGoldDeerArtifactItem extends Item {
 		super.appendTooltip(stack, context, tooltip, type);
 
 		if (tooltipString == null) {
-			try {
-				tooltipString = I18n.translate("item.deer.solid_gold_deer_artifact.tooltip")+" ";
-			} catch (Throwable ignored) {
+			if (FabricLoader.getInstance().getEnvironmentType() == EnvType.CLIENT) {
+				tooltipString = I18n.translate("item.deer.solid_gold_deer_artifact.tooltip");
+			} else {
 				tooltipString = "Every deer is gold";
 			}
+			tooltipString += " ";
 			tooltipLength = tooltipString.length();
 			maxTickOffset = ((tooltipLength - 1) * 3) + 2;
 		}
