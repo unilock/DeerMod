@@ -18,13 +18,24 @@ public class DeerMod implements ModInitializer {
 		DeerItems.init();
 
 		LootTableEvents.MODIFY.register((key, builder, source, wrapperLookup) -> {
-			if (source.isBuiltin() && LootTables.SIMPLE_DUNGEON_CHEST.equals(key)) {
-				LootPool pool = LootPool.builder()
-					.rolls(UniformLootNumberProvider.create(0, 1))
-					.with(ItemEntry.builder(DeerItems.SOLID_GOLD_DEER_ARTIFACT))
-					.build();
+			if (source.isBuiltin()) {
+				if (LootTables.SIMPLE_DUNGEON_CHEST.equals(key)) {
+					LootPool pool = LootPool.builder()
+						.rolls(UniformLootNumberProvider.create(0, 1))
+						.with(ItemEntry.builder(DeerItems.SOLID_GOLD_DEER_ARTIFACT))
+						.build();
 
-				builder.pool(pool);
+					builder.pool(pool);
+				}
+
+				if (LootTables.TRAIL_RUINS_RARE_ARCHAEOLOGY.equals(key)) {
+					LootPool pool = LootPool.builder()
+						.rolls(UniformLootNumberProvider.create(0, 1))
+						.with(ItemEntry.builder(DeerItems.AMERICAN_CHEESE_DEER))
+						.build();
+
+					builder.pool(pool);
+				}
 			}
 		});
 	}
