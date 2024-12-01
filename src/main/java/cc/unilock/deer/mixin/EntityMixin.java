@@ -15,7 +15,7 @@ public class EntityMixin {
 	@Inject(method = "onStruckByLightning(Lnet/minecraft/server/world/ServerWorld;Lnet/minecraft/entity/LightningEntity;)V", at = @At("HEAD"), cancellable = true)
 	private void onStruckByLightning(ServerWorld world, LightningEntity lightning, CallbackInfo ci) {
 		if (ItemEntity.class.isAssignableFrom(getClass())) {
-			ItemEntity item = (ItemEntity) (Object) this;
+			ItemEntity item = ItemEntity.class.cast(this);
 			if (item.getStack().isOf(DeerItems.RAW_DEER)) {
 				ItemEntity processed = new ItemEntity(world, item.getX(), item.getY(), item.getZ(), DeerItems.PROCESSED_DEER.getDefaultStack());
 				item.discard();
